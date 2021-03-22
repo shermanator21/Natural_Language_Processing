@@ -2,6 +2,7 @@ from textblob import Word
 from textblob.sentiments import NaiveBayesAnalyzer
 from textblob import TextBlob
 
+"""
 text = "Today is a beautiful day. Tomorrow looks like bad weather."
 
 blob = TextBlob(text)
@@ -47,7 +48,7 @@ print(blob.sentiment)
 print(blob.detect_language())
 
 spanish = blob.translate(to="es")
-# es = español en = english
+# es = español en = english de = german zh-CN = chinese
 
 print(spanish)
 
@@ -78,6 +79,50 @@ print(corrected_word)
 
 sentence = TextBlob("Ths sentence has missplled wrds.")
 
-corredted_sentence = sentence.correct()
+corrected_sentence = sentence.correct()
 
 print(corrected_sentence)
+
+
+# Lemmatization takes into consideration the morphological analysis
+# (varieties would be variety)
+
+word1 = Word("studies")
+word2 = Word("varieties")
+
+print(word1.lemmatize())
+print(word2.lemmatize())
+
+happy = Word("happy")
+
+print(happy.definitions)
+
+for synset in happy.synsets:
+    print(synset)
+    for lemma in synset.lemmas():
+        print(lemma)
+        print(lemma.name())
+
+lemmas = happy.synsets[0].lemmas()
+print(lemmas)
+
+for lemma in lemmas[0].antonyms():
+    print(lemma.name())
+"""
+import nltk
+
+# nltk.download("stopwords")
+
+from nltk.corpus import stopwords
+
+stops = stopwords.words("english")
+
+print(stops)
+
+blob = TextBlob("Today is a beautiful day.")
+
+print(blob.words)
+
+new_list = [word for word in blob.words if word not in stops]
+
+print(new_list)
