@@ -46,27 +46,27 @@ print(blob.sentiment)
 
 print(blob.detect_language())
 
-spanish = blob.translate(to='es')
+spanish = blob.translate(to="es")
 # es = español en = english
 
 print(spanish)
 
 
-index = Word('index')
+index = Word("index")
 
 print(index.pluralize())
 
-cacti = Word('cacti')
+cacti = Word("cacti")
 
 print(cacti.singularize())
 
-animals = TextBlob('dog cat fish bird').words
+animals = TextBlob("dog cat fish bird").words
 
 print(animals.pluralize())
 
 ############################
 # spell check and correction
-word = Word('theyr')
+word = Word("theyr")
 
 # returns words that it could mean and how likely it is that word
 print(word.spellcheck())
@@ -76,7 +76,7 @@ corrected_word = word.correct()
 
 print(corrected_word)
 
-sentence = TextBlob('Ths sentence has missplled wrds.')
+sentence = TextBlob("Ths sentence has missplled wrds.")
 
 corredted_sentence = sentence.correct()
 
