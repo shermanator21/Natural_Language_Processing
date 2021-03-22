@@ -1,3 +1,11 @@
+'''
+Need pip install...
+    textblob
+    wordcloud
+    imageio
+    pandas
+'''
+
 from textblob import TextBlob
 import nltk
 
@@ -12,7 +20,7 @@ from operator import itemgetter
 import matplotlib.pyplot as plt
 
 from pathlib import Path
-from wordcloud import wordcloud
+from wordcloud import WordCloud
 import imageio
 
 
