@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": "/Users/joseph/Documents/AdvancedPython/Natural_Language_Processing/.venv/bin/python3",
-    "python.formatting.provider": "autopep8"
+    "python.pythonPath": ".venv/bin/python",
+    "python.formatting.provider": "black"
 }
